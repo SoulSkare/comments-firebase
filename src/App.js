@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-// import { Container } from './styles';
+import Comments from './Comments';
+import NewComment from './NewComment';
 
 class App extends Component {
   state = {
@@ -12,31 +13,20 @@ class App extends Component {
     ]
   }
 
-  sendComment = () => {
+  sendComment = comment => {
     this.setState({
-      comments: [
-        ...this.state.comments, 'Comentário Novo'
-      ]
-    })
+     comments: [
+        ...this.state.comments,  comment ,
+     ]})
   }
+
+
   render() {
     return (
       <div>
-        { /* New comment */}
-        <div>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <button onClick={this.sendComment}>Enviar</button>
-        </div>
-        { /* Comments */}
-        <div>
-        { /* Comment */}
-        { this.state.comments.map(c => {
-          return <div>{c}</div>
-        })}
-       </div>
-
+          <NewComment sendComment={this.sendComment}/>
+          <Comments comments={this.state.comments} />
       </div>
-    
       );
   }
 }
