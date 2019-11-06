@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Comments from './Comments';
 import NewComment from './NewComment';
 
+import { database } from './firebase';
+
 class App extends Component {
   state = {
     comments: ['Comment 1', 'Comment 2', 'Comment 3', 'Comment 4'],
@@ -13,6 +15,9 @@ class App extends Component {
       comments: [...this.state.comments, comment],
     });
   };
+
+  // Metodo de ciclo de vida
+  componentDidMount() {}
 
   render() {
     return (
