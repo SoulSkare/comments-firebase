@@ -7,23 +7,47 @@ import { database } from './firebase';
 
 class App extends Component {
   state = {
-    comments: ['Comment 1', 'Comment 2', 'Comment 3', 'Comment 4'],
+    comments: {},
+    isLoading: false,
   };
 
   sendComment = comment => {
-    this.setState({
-      comments: [...this.state.comments, comment],
-    });
+    const id = database
+      .ref()
+      .child('comments')
+      .push().key;
+
+    const comments = {};
+
+    comments[`comments/${id}`] = {
+      comment,
+    };
+
+    database.ref().update(comments);
   };
 
   // Metodo de ciclo de vida
-  componentDidMount() {}
+  componentDidMount() {
+    this.setState({ isLoading: true });
+
+    // Referenciando o commments dentor do firebase
+    this.comments = database.ref('comments');
+
+    // Snapshot com o value de comments
+    this.comments.on('value', snapshot => {
+      this.setState({
+        comments: snapshot.val(),
+        isLoading: false,
+      });
+    });
+  }
 
   render() {
     return (
       <div>
         <NewComment sendComment={this.sendComment} />
         <Comments comments={this.state.comments} />
+        {this.state.isLoading && <p>carregando...</p>}
       </div>
     );
   }

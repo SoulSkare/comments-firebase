@@ -2,28 +2,28 @@ import React, { Component } from 'react';
 
 class NewComment extends Component {
   state = {
-    newComment: ' '
-  }
+    newComment: ' ',
+  };
 
   handleChange = event => {
     this.setState({
-      newComment: event.target.value
-    })
-  }
+      newComment: event.target.value,
+    });
+  };
 
   sendComment = () => {
-    this.props.sendComment(this.state.newComment)
+    this.props.sendComment(this.state.newComment);
     this.setState({
-      newComment: ' '
-    })
-  }
+      newComment: ' ',
+    });
+  };
 
   render() {
     return (
       <div>
-        <textarea value={this.state.newComment} onChange={this.handleChange}></textarea>
+        <textarea value={this.state.newComment} onChange={this.handleChange} />
         <button onClick={this.sendComment}>Enviar</button>
-    </div>
+      </div>
     );
   }
 }
