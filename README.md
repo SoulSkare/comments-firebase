@@ -1,8 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="left">
+    App to comments with ReactJS
+</h1>
 
-## Available Scripts
+<h4 align="lef">
+  Comment web application with real time communication with firebase using React.
+</h4>
 
-In the project directory, you can run:
+<p align="left">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ewersoncastelo/comments-firebase.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ewersoncastelo/comments-firebase.svg">
+ <a href="https://www.codacy.com/manual/ewersoncastelo/comments-firebase?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ewersoncastelo/comments-firebase&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/278b57830ba040b6a3a3a9d351008920"/></a>
+<a href="https://github.com/ewersoncastelo/comments-firebase/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/ewersoncastelo/comments-firebase"></a>
+<a href="https://github.com/ewersoncastelo/comments-firebase/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/ewersoncastelo/comments-firebase.svg">
+  </a>
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/ewersoncastelo/comments-firebase.svg">
+  <a href="https://github.com/ewersoncastelo/comments-firebase/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ewersoncastelo/comments-firebase.svg">
+  </a>
+</p>
+
+## Installation
+
+-   [Node.js][nodejs]
+-   [Firebase](https://nodejs.org)
+-   [styled-components](https://www.styled-components.com/)
+-   [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
+-   And anothers packages...
+
+## How To Use
+
+This App requires [Node][nodejs] v4+ and [Yarn][yarnpkg] to run.
+
+Open your favorite Terminal and run these commands. Navigate to the project folder and run the following command to install the dependencies:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/ewersoncastelo/comments-firebase
+
+# Go into the repository
+$ cd comments-firebase
+
+# Install dependencies
+$ yarn install
+
+# Run the server
+$ yarn start
+```
 
 ### `yarn start`
 
@@ -27,42 +71,20 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is under the [MIT LICENSE](https://github.com/ewersoncastelo/comments-firebase/blob/master/LICENSE) for more information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[nodejs]: https://nodejs.org/
+[yarnpkg]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[inso]: https://insomnia.rest/download/
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
